@@ -3,6 +3,7 @@ package allJavafloder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -53,12 +54,32 @@ public class EmployeeService {
 	{
 		Update.allUpdateMethod(con);
 	}
-	public static void deleteEmp( Connection con)
-	{
-		
+	public static void deleteEmp( Connection con) throws SQLException
+	{ 
+		      PreparedStatement ps=con. prepareStatement("delete table Employee where id=?");
+		      Scanner sc=new Scanner(System.in);
+	           System.out.println("enter the Empid");
+	        	 int id=sc.nextInt();
+	        	 ps.setInt(1,id);
+	        	 ps.execute();
 	}
-	public static void showEmp(Connection con)
-	{
+	public static void showEmp(Connection con) throws SQLException
+	{  
+	      PreparedStatement ps=con. prepareStatement("select* Employee where id=?");
+	      Scanner sc=new Scanner(System.in);
+          System.out.println("enter the Empid");
+      	  int id=sc.nextInt();
+      	  ps.setInt(1,id);
+      	ResultSet rs=  ps.executeQuery();
+        if(rs.next())
+        { System.out.println(rs.getInt(1));
+          System.out.println(rs.getString(2));
+        }
+        else 
+        {
+       	 System.out.println("not present");
+        }
+        
 		
 	}
 	public static void allMethodAdmin() throws SQLException
