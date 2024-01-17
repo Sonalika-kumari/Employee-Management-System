@@ -49,9 +49,9 @@ public class EmployeeService {
       allMethodAdmin();
       
 	}
-	public static void updateEmp( Connection con)
+	public static void updateEmp( Connection con) throws SQLException
 	{
-		
+		Update.allUpdateMethod(con);
 	}
 	public static void deleteEmp( Connection con)
 	{
