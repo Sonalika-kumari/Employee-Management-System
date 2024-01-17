@@ -31,7 +31,7 @@ public class Update {
           {
         	  PreparedStatement ps=con.prepareStatement("update  Employee set email=? where id=?");
          	 System.out.println("enter the new Email");
-         	String e=sc.next();
+           	String e=sc.next();
          	 ps.setString(1, e);
          	 System.out.println("enter the Empid");
          	 int id=sc.nextInt();

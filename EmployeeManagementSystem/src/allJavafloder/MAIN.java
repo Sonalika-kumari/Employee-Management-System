@@ -29,7 +29,7 @@ public class MAIN {
 		     String pass=sc.next();
 		  if(checkValidationclass.checkEmployee(id,pass))
 		  {
-			  //method Call()
+			  EmployeeServicee.employeeAllMethod();
 		  }
 		  else {
 			  System.out.println("w password and id");
@@ -38,13 +38,7 @@ public class MAIN {
 	   else {
 		   System.out.println("InValid");
 	   }
-// Class.forName("com.mysql.cj.jdbc.Driver");
-//	
-//    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/schooldatabase","root","YES");	
-//     
-//     PreparedStatement ps=con. prepareStatement("select* from user where id=?");
-//     Scanner sc=new Scanner(System.in);-+
-//     
+
 		
 	}
 
