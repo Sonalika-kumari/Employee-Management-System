@@ -16,7 +16,7 @@ public class MAIN {
 	     String pass=sc.next();
 	     if(checkValidationclass.checkAdmin(email,pass))
 	     {
-	    	 //methodcall;    
+	    	 EmployeeService.allMethodAdmin();
 	     }
 	     else {
 	    	 System.out.println("not valid");
